@@ -32,17 +32,5 @@ Alguns pontos ainda estão sendo implementados e melhorados:
 - Conteúdo institucional detalhado
 - Testes de compatibilidade entre navegadores
 
-## 📁 Estrutura de diretórios
 
-<<<<<<< HEAD
-├── index.html
-├── style.css
-├── imgs/
-│   └── adtbanner.png
-└── README.md
-
-=======
-├── index.html ├── style.css ├── imgs/ │ 
-└── README.md                └── adtbanner.png 
->>>>>>> a2b788012efa5219fca40e7c9b34d63bdf917d4f
 
