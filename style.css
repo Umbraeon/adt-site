@@ -1,0 +1,22 @@
+/* ===================
+   Reset e boas práticas
+=================== */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  

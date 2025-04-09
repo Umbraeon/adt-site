@@ -3,35 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Associação dos Deficientes de Taboão da Serra - Promovendo inclusão e apoio à comunidade"
+    />
     <title>ADT - Associação dos Deficientes de Taboão da Serra</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
     <header>
-      <nav aria-label="Menu principal">
+      <input type="checkbox" id="menu-toggle" aria-hidden="true" />
+      <label for="menu-toggle" class="menu-icon" aria-expanded="false">
+        &#9776; <span class="sr-only">Menu principal</span>
+      </label>
+
+      <nav class="menu" aria-label="Navegação principal">
         <ul>
-          <li><a href="#banner">Inicio</a></li>
-          <li><a href="#quem-somos">Quem Somos</a></li>
-          <li><a href="#eventos">Eventos</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#banner" class="nav-link">Inicio</a></li>
+          <li><a href="#quem-somos" class="nav-link">Quem Somos</a></li>
+          <li><a href="#eventos" class="nav-link">Eventos</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="banner">
-        <h1>ADT</h1>
-        <a
-          href="https://link-da-doacao.com"
-          target="_blank"
-          class="botao-doacao"
-          >Doe agora</a
-        >
-        <img src="caminho-da-imagem.jpg" alt="Banner da ADT" />
+        <div class="banner-overlay"></div>
+        <img
+          src="./imgs/adtbanner.png"
+          alt="Banner da ADT"
+          class="banner-img"
+        />
+        <div class="banner-content">
+          <h1>ADT</h1>
+          <a
+            href="https://link-da-doacao.com"
+            target="_blank"
+            class="botao-doacao"
+            >Doe agora</a
+          >
+        </div>
       </section>
       <section id="quem-somos">
         <h2>Quem somos</h2>
-        <p>Conteúdo em construção...</p>
+        <p>
+          Fundada em 1986, a
+          <strong>Associação dos Deficientes de Taboão da Serra (ADT)</strong> é
+          uma instituição sem fins lucrativos comprometida com a inclusão social
+          de pessoas com deficiência de todas as idades.
+        </p>
+
+        <p>
+          Nossa missão é promover a integração social através de atendimento
+          especializado, defendendo direitos e garantindo condições dignas de
+          desenvolvimento. Oferecemos acolhimento em período integral, matutino
+          e vespertino em instalações adaptadas.
+        </p>
+
+        <p>
+          Desde 1999, com o apoio fundamental de famílias e voluntários,
+          ampliamos nossa estrutura física com a construção de um novo prédio e
+          reformas que permitiram melhorar significativamente a qualidade do
+          atendimento.
+        </p>
+
+        <p>
+          Atuamos principalmente com recursos governamentais, mas para manter e
+          expandir nossos serviços, contamos com a solidariedade de
+          colaboradores e parceiros que acreditam na transformação social.
+        </p>
+        <div class="conquistas">
+          <div class="marcos">
+            <h3>+35 anos</h3>
+            <p>De atuação contínua</p>
+          </div>
+          <div class="marcos">
+            <h3>2 prédios</h3>
+            <p>Estruturas adaptadas</p>
+          </div>
+          <div class="marcos">
+            <h3>3 períodos</h3>
+            <p>Atendimento integral</p>
+          </div>
+          <div class="marcos">
+            <h3>115+ Atendidos</h3>
+            <p>Com muito carinho</p>
+          </div>
+        </div>
       </section>
+
       <section id="eventos">
         <h2>Eventos</h2>
         <div class="cards-eventos">
@@ -69,10 +130,10 @@
     </main>
     <footer id="contato">
       <address>
-        <p>Associação dos deficientes de Taboão da Serra</p>
-        <p>Tel: (11) 4135-1858</p>
-        <p>CNPJ: 56.334.329/0001-43</p>
-        <p>Rua Ida Romussi Gasparinette, 126 - Parque Laguna, CEP 06795-000</p>
+        <p><i class="fa-solid fa-handshake-angle"></i> Associação dos Deficientes de Taboão da Serra</p>
+        <p><i class="fa-solid fa-phone"></i> (11) 4135-1858</p>
+        <p><i class="fa-solid fa-id-card"></i> CNPJ: 56.334.329/0001-43</p>
+        <p><i class="fa-solid fa-location-dot"></i> Rua Ida Romussi Gasparinette, 126 - Parque Laguna, CEP 06795-000</p>
       </address>
     </footer>
   </body>
