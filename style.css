@@ -18,5 +18,29 @@ html {
     background-color: #fff;
     color: #333;
   }
+
+  /* ===================
+          BANNER
+  =================== */
   
+  .banner-container {
+    background-image: url('./imgs/adtbanner.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;           
+    justify-content: flex-start;   
+    padding-left: 5%;              
+    color: white;
+  }
+  
+  .banner-conteudo {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
+    max-width: 500px;
+    text-align: left;              
+  }
   
