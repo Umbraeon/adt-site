@@ -1,0 +1,368 @@
+/* ===================
+       HEADER
+=================== */
+  header {
+    display: flex;
+    position: relative;
+    z-index: 10;
+  }
+  
+
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Botão hambúrguer */
+  .menu-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    z-index: 20;
+    background-color: #005CAF;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu-toggle:checked ~ .overlay {
+    display: block;
+  }
+  
+  .overlay {
+    content: '';
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4); 
+    z-index: 5;
+  }
+  
+  /* Linhas do hambúrguer */
+  .menu-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    transition: 0.3s;
+    border-radius: 2px;
+  }
+  
+  /* NAV lateral */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #005CAF;
+    transition: left 0.3s ease-in-out;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    box-sizing: border-box; 
+  }
+  
+  .logo-container {
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;  
+    position: static; 
+  }
+  
+  .logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    margin-top: 2rem;
+    margin-left: 0.4rem;
+  }
+
+  .sigla {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem; 
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0 1rem;
+  }
+  
+  .menu ul li {
+    margin: 1.5rem 0;
+  }
+  
+  .menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+  }
+  
+  /* Quando o input está checked, mostra o menu */
+  .menu-toggle:checked ~ .menu {
+    left: 0;
+  }
+  
+  /* Animação: transforma hambúrguer em X */
+  .menu-toggle:checked + .menu-btn .menu-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-toggle:checked + .menu-btn .menu-bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle:checked + .menu-btn .menu-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+
+/* ===================
+       BOTÃO
+=================== */
+.botao-conheca {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #005cbf;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    align-self: flex-start; 
+  }
+  
+  .botao-conheca:hover {
+    background-color: #005cbf;
+    color: white;
+    transform: scale (1.05);
+  }
+
+/* ===================
+       BOTÃO DOAÇÃO
+=================== */
+.botao-doacao {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #ffcc00;
+  color: #003366;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.botao-doacao:hover {
+  background-color: #e6b800;
+}
+
+
+/* ===================
+        CARDS
+=================== */
+  
+.cards-eventos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(300px, auto); 
+  align-items: start; 
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-date, .card-content h3 {
+    color: #005cbf;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .card-content p {
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+  }
+
+/* ===================
+        FLIP
+=================== */
+.flip-card {
+  height: 100%; 
+  position: relative;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #fff; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* ===================
+        WPP
+=================== */
+
+#whatsapp-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+#whatsapp-link:hover {
+  transform: scale(1.1);
+}
+
+#whatsapp-link i {
+  font-size: 28px;
+  color: white;
+}
+
+/* ===================
+      DOADORES
+=================== */
+
+.quem-somos-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap; 
+}
+
+.quem-somos-conteudo {
+  flex: 1 1 50%;
+}
+
+.quem-somos-logos {
+  flex: 1 1 35%;
+}
+
+.logos-doadores {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.logos-doadores img {
+  width: 100%;
+  max-width: 150px;
+  height: 90px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  padding: 4px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.logo-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.logo-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

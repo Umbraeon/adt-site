@@ -1,0 +1,306 @@
+@import url(base.css);
+@import url(component.css);
+
+
+/* ===================
+        BANNER
+=================== */
+
+#banner {
+    position: relative;
+  }
+  
+  .banner-container {
+    background-image: url('../imgs/adtbanner.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    color: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner-conteudo {
+    position: absolute;
+    z-index: 2;
+    background: linear-gradient(to right, 
+    rgba(0, 92, 175, 0.85), 
+    rgba(0, 92, 175, 0.5) 60%,
+    rgba(0, 92, 175, 0.2) 90%, 
+    rgba(0, 92, 175, 0) 100%);
+    padding: 2rem 4rem;
+    color: white;
+    width: 50vw;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin: 0;
+  }
+ 
+.banner-conteudo h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  }
+  
+  .banner-conteudo p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+/* ===================
+       QUEM SOMOS
+=================== */
+
+#quem-somos {
+    padding: 2rem 4rem;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+.quem-somos h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.quem-somos p {
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.conquistas-section h3{
+  text-align: center;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+ul.conquistas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.conquista-item{
+    background-color: #e6f0ff;
+    color: #003366;
+    padding: 1rem 1rem;
+    border-radius: 0.75rem;
+    max-width: 220px;
+    flex: 1 1 180px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2 ease;
+}
+
+.conquista-item h4{
+    text-align: center;
+    align-items: center;
+    margin: 0 0 0.3rem 0;
+    font-size:1.1rem;
+    font-weight: 600;
+    color: #002244
+}
+
+.conquista-item p{
+    margin: 0;
+    font-size: 0.95rem;
+    color: #003366;
+    opacity: 0.85;
+}
+
+.conquista-item:hover{
+    transform: scale(1.05);
+}
+
+/* ===================
+       EVENTOS
+=================== */
+
+#eventos {
+  padding: 2rem 4rem;
+  background-color: #f8f8f8;
+  text-align: center;
+  overflow: hidden;
+}
+
+#eventos h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #005cbf;
+}
+
+.card-front-p {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+  margin-top: 0.3rem;
+  letter-spacing: 0.4px;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+
+/* ===================
+       DOAÇÃO
+=================== */
+
+#doacao {
+  background-color: #f4f4f4;
+  padding: 2rem 4rem;
+}
+
+.doacao-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.doacao-img {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.1);
+  transform: rotate(-3deg);
+  width: 600px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doacao-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.doacao-conteudo {
+  max-width: 500px;
+  text-align: left;
+}
+
+#doacao h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+#doacao p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+#contato {
+  background-color: #003366;
+  color: white;
+  padding: 3rem 2rem;
+  font-size: 1rem;
+}
+
+/* ===================
+       FOOTER
+=================== */
+#contato {
+  background-color: #002b5b;
+  color: white;
+  padding: 2rem 4rem;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-bloco h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #ffcc00;
+}
+
+.footer-bloco p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.footer-bloco i {
+  color: #ffcc00;
+  min-width: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-bloco a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-bloco a:hover {
+  color: #ffcc00;
+}
+
+.footer-bloco a.social-link:hover i {
+  transform: scale(1.2);
+  color: #ffcc00;
+}
+
+address {
+  font-style: normal;
+}
+
+
+@media (max-width: 500px) {
+  .footer-bloco h3 {
+    font-size: 0.95rem;
+  }
+  
+  .footer-bloco p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
